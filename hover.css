@@ -9,7 +9,6 @@ body {
     padding: 0;
     background-image: linear-gradient(180deg, orange, white, green);
     overflow: hidden;
-
 }
 
 .butt {
@@ -20,18 +19,18 @@ body {
 }
 
 .btn {
-    background-color: navy;
+    background-image: linear-gradient(to right, rgb(3, 3, 136), rgb(53, 53, 255));
     position: relative;
     width: max-content;
     padding: 10px 30px;
     border-radius: 100px;
     border: none;
-    color: white;
     margin: 0 auto;
+    color: white;
     font-size: 25px;
     font-family: sans-serif;
     font-weight: 600;
-    z-index: 0;
+    z-index: 1;
     cursor: pointer;
 }
 
@@ -53,11 +52,24 @@ body {
     bottom: 0;
     left: 0;
     background: linear-gradient(to right, rgb(221, 154, 30),white, rgb(16, 121, 16));
-    transition: 15ms ease-in-out;
-    z-index: -1;
+    transition: 200ms ease-in-out;
+    z-index: -1;    
 }
 
 .btn:hover::after{
     width: 100%;
 }
 
+.btn::before{
+    content: '';
+    background-image: linear-gradient(to right, rgb(17, 17, 244), rgb(25, 25, 77), rgb(16, 16, 117));
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: -2px;
+    z-index: -1;
+    background-size: 600%;
+    border-radius: 100px;
+    filter: blur(3.5rem);
+}
